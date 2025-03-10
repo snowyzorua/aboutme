@@ -4,11 +4,10 @@ html {
 
     background-image: url(images/shiba2a.jpg);
     background-color: rgba(0, 0, 0, 0.606);
-    display: block;
-    width: 50vW;
+    width: 60%;
     margin: 0 auto;
     font-family: 'Garamond', sans-serif;
-    font-size: 1vw;
+    font-size: 1.4rem;
     color: rgb(199, 210, 220);
     text-align: center;
     border-radius: 10px;
@@ -23,13 +22,13 @@ body {
 }
 
 main, body, article, nav, ul, footer, header {
-    display:inline-block;
+    display:block;
     line-height: 1.4;
     padding-right: 1.75em;
     padding-left: 1.75em;
     align-content:center;
     border-radius: 10px;
-    margin: 1em;
+    margin: 0.9em;
     border-color:black;
     border-width: 2px;
     border-style: solid;
@@ -54,7 +53,7 @@ ul, ol {
     display: flex;
     justify-content: center; 
     padding-left: 0px;
-    margin: auto;
+    margin: auto 0;
     padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -77,17 +76,17 @@ nav {
     padding: 1em 3em;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
 }
 
 img {
-    width: 26vw;
-    height: auto;
     border-radius: 10px;
     display: block;
     padding-left: inherit;
     padding-right: inherit;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
 aside {
@@ -131,6 +130,21 @@ a:visited {
     margin-bottom: 1vw;
     vertical-align: middle;
   }
+
+  
+  @media (max-width: 1020px) {
+    html {
+      width: 70%;
+      font-size: 1rem;
+     }  
+     h1,h2,h3,h4,h5 {
+    text-align:center;
+    }
+      img {
+    margin:auto 0;
+    width: 70vh;
+    }
+  }
   
   @media (max-width: 800px) {
     .column {
@@ -144,6 +158,41 @@ a:visited {
     .column {
       flex: 100%;
       max-width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    html {
+      width: 100%;
+      font-size: 1rem;
+      margin: 1rem;
+     }  
+     h1,h2,h3,h4,h5 {
+    text-align:center;
+    }
+      img {
+    margin:auto 0;
+    width: 70vh;
+    }
+    .table {}
+  }
+
+
+  @media (max-width: 480px) {
+    html {
+        width: 100%;
+        font-size: 1rem;
+    }
+    h1,h2,h3,h4,h5 {
+      text-align:center;
+    }
+    img {
+      margin:auto 0;
+      width: 50vh;
+    }
+    nav {
+      block-size: 20%;
+      display: block;
     }
   }
 
