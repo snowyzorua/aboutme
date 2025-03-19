@@ -142,7 +142,9 @@ a:visited {
     }
       img {
     margin:auto 0;
-    width: 70vh;
+    max-width:100%;
+    height:auto;
+    display:block;
     }
   }
   
@@ -150,6 +152,12 @@ a:visited {
     .column {
       flex: 50%;
       max-width: 50%;
+    }
+    img {
+     margin:auto 0;
+     max-width:100%;
+     height:auto;
+     display:block; 
     }
   }
   
@@ -174,37 +182,63 @@ a:visited {
     margin:auto 0;
     width: 70vh;
     }
-    .table {}
   }
 
 
   @media (max-width: 480px) {
-    html {
-        width: 100%;
+    html, body {
+        max-width: 100%;
+        width: auto;
         font-size: 1rem;
-    }
-    h1,h2,h3,h4,h5 {
-      text-align:center;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        text-align: center;
     }
     img {
-      margin:auto 0;
-      width: 50vh;
+      max-width: 90%;
+      min-width: 150px;
+      height: auto;
+      margin: auto;
+      display: block;
+      width:auto 0;
     }
     nav {
       block-size: 20%;
       display: block;
     }
-  }
 
-.table {
-    display: grid;
-    grid-template-columns:40% 40% 40%;
-    grid-gap: 5%;
-    justify-content: center;
-    max-width: 26vw;
-    width:26vw;
-    margin:auto;
-    margin-bottom: 3vw;
+    .table {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      width: 100%; 
+      gap: 10px;
+      margin: auto 0;
+      padding: 0;
+   }
+
+    .table > * {
+     flex: 1 1 100%;
+     max-width: 100%;
+     box-sizing: border-box;
+    }
+  }
+  
+
+  .table {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    max-width: 100%; 
+    margin: auto; 
+}
+
+.table > * {
+    flex: 1 1 calc(33.33% - 10px); 
+    max-width: calc(33.33% - 10px); 
+    box-sizing: border-box; 
 }
 .sticky {
     position: sticky;
